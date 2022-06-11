@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      "transparent": "transparent",
       "neutral-100": "#FFFFFF",
       "neutral-200": "#F5F5F5",
       "neutral-300": "#E4E4E4",
@@ -21,6 +22,11 @@ module.exports = {
       "neutral-1000": "#151619",
       "orange": "#E46643",
       "orange-hover": "#F39765",
+    },
+    spacing: {
+      "24": "1.5rem",
+      "56": "3.5rem",
+      "250": "15.625rem",
     },
     extend: {
       fontFamily: {
