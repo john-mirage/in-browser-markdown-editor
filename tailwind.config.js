@@ -25,8 +25,15 @@ module.exports = {
     },
     spacing: {
       "0": "0rem",
+      "8": "0.5rem",
+      "12": "0.75rem",
+      "14": "0.875rem",
+      "16": "1rem",
       "18": "1.125rem",
       "24": "1.5rem",
+      "27": "1.6875rem",
+      "32": "2rem",
+      "40": "2.5rem",
       "56": "3.5rem",
       "250": "15.625rem",
     },
@@ -58,6 +65,9 @@ module.exports = {
       },
       letterSpacing: {
         "2": "0.125rem",
+      },
+      borderRadius: {
+        "4": "0.25rem",
       },
     },
   },

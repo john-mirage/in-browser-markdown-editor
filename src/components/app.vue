@@ -13,33 +13,30 @@ function toggleDrawer() {
 </script>
 
 <template>
-  <div class="flex flex-row w-full overflow-hidden">
+  <div class="overflow-hidden">
     <div class="absolute z-0 top-0 left-0 w-full h-56 bg-neutral-800"></div>
-    <TransitionGroup name="content">
-      <Drawer v-if="state.drawer" key="drawer" />
-      <div class="flex-shrink-0 flex-grow-0 basis-auto w-full" key="view">
-        <Bar :drawer="state.drawer" @toggle-drawer="toggleDrawer" />
-        <main class="w-full">
-          <Preview />
-        </main>
-      </div>
-    </TransitionGroup>
+    <Transition>
+      <Drawer v-if="state.drawer" />
+    </Transition>
+    <div class="flex-shrink-0 flex-grow-0 basis-auto w-full transition-transform duration-300" :class="{'translate-x-250': state.drawer}">
+      <Bar :drawer="state.drawer" @toggle-drawer="toggleDrawer" />
+      <main class="w-full">
+        <Preview />
+      </main>
+    </div>
   </div>
 </template>
 
 <style>
-.content-move,
-.content-enter-active,
-.content-leave-active {
-  transition: all 300ms ease;
+.v-enter-active,
+.v-leave-active {
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
 }
 
-.content-enter-from,
-.content-leave-to {
+.v-enter-from,
+.v-leave-to {
   transform: translateX(-100%);
-}
-
-.content-leave-active {
-  position: absolute;
 }
 </style>
