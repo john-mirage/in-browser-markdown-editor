@@ -24,6 +24,7 @@ module.exports = {
       "orange-hover": "#F39765",
     },
     spacing: {
+      "0": "0rem",
       "24": "1.5rem",
       "56": "3.5rem",
       "250": "15.625rem",
