@@ -18,7 +18,7 @@ function toggleDrawer() {
     <TransitionGroup name="content">
       <Drawer v-if="state.drawer" key="drawer" />
       <div class="flex-shrink-0 flex-grow-0 basis-auto w-full" key="view">
-        <Bar @toggle-drawer="toggleDrawer" />
+        <Bar :drawer="state.drawer" @toggle-drawer="toggleDrawer" />
         <main class="w-full">
           <Preview />
         </main>
