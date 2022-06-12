@@ -34,6 +34,7 @@ module.exports = {
       "27": "1.6875rem",
       "32": "2rem",
       "40": "2.5rem",
+      "42": "2.625rem",
       "56": "3.5rem",
       "250": "15.625rem",
     },
@@ -68,6 +69,12 @@ module.exports = {
       },
       borderRadius: {
         "4": "0.25rem",
+      },
+      minHeight: {
+        "view": "calc(100vh - 3.5rem)",
+      },
+      scale: {
+        "2": "2",
       },
     },
   },

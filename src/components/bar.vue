@@ -46,11 +46,14 @@ defineProps<{
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 150ms ease;
+  transition-property: transform, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  transform: scale(0);
 }
 </style>
